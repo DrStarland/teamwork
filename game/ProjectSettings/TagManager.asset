@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - TutorialRequirement
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -12,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -41,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 1211054847
     locked: 0
