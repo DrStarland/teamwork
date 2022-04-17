@@ -114,4 +114,25 @@ public class TestSuite
 
         Assert.AreEqual("YouLost", ActiveSceneName);
     }
+
+    /// <summary>
+    /// Тестирует нанесение урона врагу
+    /// </summary>
+    [UnityTest]
+    public IEnumerator TestPlayerDamaging()
+    {
+        SceneManager.LoadScene("FirstLevel");
+
+        yield return null;
+
+        Player player = UnityEngine.Object.FindObjectOfType<Player>();
+        GameObject enemy = GameObject.Find("ShootingEnemy");
+            
+        enemy.transform.position = player.transform.position;
+        for (int i = 0; i < 5; i++) player.Shooting();
+    
+        yield return new WaitForSeconds(3f);
+
+        Assert.IsTrue(enemy == null);
+    }
 }
