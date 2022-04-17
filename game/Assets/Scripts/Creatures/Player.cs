@@ -127,7 +127,7 @@ public class Player : Creature {
     /// <summary>
     /// Функция стрельбы игрока
     /// </summary>
-    void Shooting() {
+    public void Shooting() {
         posSprite.enabled = true;
         if (scale == 1f) {
             GetComponent<Rigidbody2D>().velocity = new Vector2(8f, GetComponent<Rigidbody2D>().velocity.y);
